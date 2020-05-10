@@ -1,23 +1,15 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
+import { link } from './components/link'
+import links_data from './data/links'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="/favicon.ico" className="App-logo" alt="logo" />
+        <img src="/favicon.ico" className="jumpy-bumpy" alt="logo" />
         <div className="content">
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          {links_data.map( l => link(l.name, l.link))}
         </div>
       </header>
     </div>
